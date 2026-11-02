@@ -1,0 +1,50 @@
+[build-system]
+requires = ["setuptools>=45", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "optiland-sms"
+version = "0.0.0"
+description = "Miñano-Benítez SMS nonimaging profiles as an Optiland entry-point surface-geometry plugin"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "Apache-2.0"}
+authors = [
+    {name = "ray-tracing-shapely authors and contributors", email = "micheleben@gmail.com"}
+]
+keywords = ["optiland", "ray-tracing", "optics", "sms", "nonimaging"]
+classifiers = [
+    "Development Status :: 1 - Planning",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: Apache Software License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Topic :: Scientific/Engineering :: Physics",
+]
+
+dependencies = [
+    "optiland",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0",
+]
+
+# Not yet declared: [project.entry-points."optiland.surfaces"] -- the register()
+# target this would point at (optiland_sms.register:register) doesn't exist yet.
+# See dev_doc/architecture/components/optiland_sms_plugin.md.
+
+[project.urls]
+Homepage = "https://github.com/tiberavon/optiland-sms"
+Repository = "https://github.com/tiberavon/optiland-sms"
+
+[tool.setuptools]
+package-dir = {"" = "."}
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["optiland_sms", "optiland_sms.*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
