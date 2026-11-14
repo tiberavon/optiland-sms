@@ -1,6 +1,6 @@
 # optiland-sms
 
-Registers [`ray_tracing_shapely`](https://github.com/micheleben/ray_tracing_shapely)'s
+Registers [`ray_tracing_shapely`](https://github.com/tiberavon/ray-tracing-shapely)'s
 Miñano–Benítez SMS nonimaging profiles as an Optiland `optiland.surfaces` entry-point
 plugin — discovered automatically by [Optiland](https://github.com/optiland/optiland)'s
 own plugin loader, no source edit to Optiland required.
