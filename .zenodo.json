@@ -1,0 +1,27 @@
+{
+  "upload_type": "software",
+  "title": "optiland-sms: SMS lens surfaces in Optiland's sequential engine",
+  "license": "Apache-2.0",
+  "creators": [
+    {
+      "name": "Benetti, Michele",
+      "orcid": "0000-0002-5851-6937"
+    }
+  ],
+  "description": "Mi\u00f1ano-Ben\u00edtez SMS (Simultaneous Multiple Surface) lens surfaces as an Optiland plugin: a spline span of a ray-tracing-shapely profile.json becomes a sequential surface of revolution, sms_spline, traced exactly and, under Optiland's torch backend, differentiable with respect to the spline's points. Registered through Optiland's entry point; it depends on Optiland only.",
+  "keywords": [
+    "optiland",
+    "ray-tracing",
+    "optics",
+    "sms",
+    "nonimaging"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "10.5281/zenodo.23991020",
+      "relation": "isSupplementTo",
+      "resource_type": "software",
+      "scheme": "doi"
+    }
+  ]
+}
