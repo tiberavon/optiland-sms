@@ -5,7 +5,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "optiland-sms"
-version = "0.0.0"
+version = "0.1.0"
 description = "Miñano-Benítez SMS nonimaging profiles as an Optiland entry-point surface-geometry plugin"
 readme = "README.md"
 requires-python = ">=3.11"
@@ -16,7 +16,7 @@ authors = [
 ]
 keywords = ["optiland", "ray-tracing", "optics", "sms", "nonimaging"]
 classifiers = [
-    "Development Status :: 1 - Planning",
+    "Development Status :: 3 - Alpha",
     "Intended Audience :: Science/Research",
     "Operating System :: OS Independent",
     "Programming Language :: Python :: 3",
@@ -27,17 +27,26 @@ classifiers = [
 ]
 
 dependencies = [
-    "optiland",
+    # 0.6.3 is the first release whose Newton-Raphson geometries give exact
+    # first-order gradients through the intersection (the one-step implicit
+    # correction). The plugin entry-point groups exist from 0.6.2.
+    "optiland>=0.6.3",
 ]
 
 [project.optional-dependencies]
+# Gradients: Optiland's torch backend.
+torch = [
+    "torch",
+]
 dev = [
     "pytest>=7.0.0",
+    "torch",
 ]
 
-# Not yet declared: [project.entry-points."optiland.surfaces"] -- the register()
-# target this would point at (optiland_sms.register:register) doesn't exist yet.
-# See dev_doc/architecture/components/optiland_sms_plugin.md.
+# Optiland's plugin loader calls register() the first time it meets a surface
+# type it does not know: "sms_spline" needs no import of this package.
+[project.entry-points."optiland.surfaces"]
+sms_spline = "optiland_sms.register:register"
 
 [project.urls]
 Homepage = "https://github.com/tiberavon/optiland-sms"

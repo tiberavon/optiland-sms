@@ -5,10 +5,10 @@
 # repository's root, because a satellite's published tree is rooted at its
 # own package directory.
 #
-# This distribution is at planning stage: it holds a package skeleton and an
-# import smoke test. The workflow exists so that the name stays demonstrably
-# installable while it is reserved, and so the first real commit arrives into
-# a repository that already checks itself.
+# The tests trace the fixture lens on numpy and torch and check the gradient,
+# so torch is installed, from its CPU index: the default wheel carries CUDA
+# libraries the tests never use. They need Optiland 0.6.3 or later, from
+# PyPI, and not ray_tracing_shapely (the fixture is a profile.json).
 name: CI
 
 on:
@@ -38,6 +38,7 @@ jobs:
       - name: Install
         run: |
           python -m pip install --upgrade pip
+          pip install torch --index-url https://download.pytorch.org/whl/cpu
           pip install -e ".[dev]"
       - name: Test
         run: pytest -q
