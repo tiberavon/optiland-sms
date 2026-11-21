@@ -54,6 +54,6 @@ from .geometry import SMSSplineGeometry
 from .meridian import Meridian, read_meridian
 from .register import SURFACE_TYPE, register
 
-__version__ = "0.1.0"
+__version__ = "0.1.1"
 
 __all__ = ["SMSSplineGeometry", "Meridian", "read_meridian", "register", "SURFACE_TYPE", "__version__"]
