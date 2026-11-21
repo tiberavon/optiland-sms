@@ -10,6 +10,7 @@ authors:
     given-names: Michele
     orcid: "https://orcid.org/0000-0002-5851-6937"
   - name: ray-tracing-shapely authors and contributors
+doi: "10.5281/zenodo.24416270"
 repository-code: "https://github.com/tiberavon/optiland-sms"
 abstract: >-
   Miñano-Benítez SMS (Simultaneous Multiple Surface) lens surfaces as an

@@ -1,5 +1,7 @@
 # optiland-sms
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24416270.svg)](https://doi.org/10.5281/zenodo.24416270)
+
 Miñano–Benítez SMS (Simultaneous Multiple Surface) lens surfaces in
 [Optiland](https://github.com/optiland/optiland)'s sequential engine: a spline span of a
 [`ray_tracing_shapely`](https://github.com/tiberavon/ray-tracing-shapely) `profile.json` becomes a
@@ -84,6 +86,18 @@ On the RR lens of Chaves, *Introduction to Nonimaging Optics*, Example 9.1 (`tes
 pip install -e ".[dev]"
 pytest
 ```
+
+## Citing
+
+If you use this software, please cite it, and the ray-tracing-shapely project whose profiles it
+reads. `CITATION.cff` carries the metadata for both; GitHub formats it from the *Cite this
+repository* link.
+
+This project: [doi:10.5281/zenodo.24416270](https://doi.org/10.5281/zenodo.24416270). That is the
+*concept* DOI, which always resolves to the latest release. Each release also has its own DOI, to
+cite when a result must be pinned to the exact version it came from.
+
+ray-tracing-shapely: [doi:10.5281/zenodo.23991020](https://doi.org/10.5281/zenodo.23991020).
 
 ## Licence
 
